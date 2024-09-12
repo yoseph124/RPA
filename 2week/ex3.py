@@ -6,3 +6,4 @@ print(num3)
 
 num4 = num1//3
 print("num1//3",num4)
+
