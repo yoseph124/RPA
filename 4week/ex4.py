@@ -10,4 +10,8 @@ def sumfunc(num1):
         return
 
 a=int(input("1이상의 정수를 입력하시오 : "))
+<<<<<<< HEAD
 sumfunc(a)
+=======
+sumfunc(a)
+>>>>>>> 3299935c67fb0f7b651a2a9a3e6c0fb8fd792464
