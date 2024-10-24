@@ -10,8 +10,6 @@ def read_root():
 def read_item(item_id: int, name: str = None, age: int = 0):
     return {"item_id": item_id,"name":name,"age":age}
 
-from fastapi.staticfiles import StaticFiles
-app.mount("/", StaticFiles(directory="static",html=True), name="static")
 
 from fastapi import Form
 #@app.post("/user")
@@ -22,6 +20,9 @@ from fastapi import Form
 async def read_user_form(name: str = Form(...), studentcode: str = Form(...), major: str = Form(...)):
     print(f"Received data: Name={name}, Student Code={studentcode}, Major={major}")
     return {"msg": f"{major} {name}님 ({studentcode})반갑습니다."}
+
+from fastapi.staticfiles import StaticFiles
+app.mount("/", StaticFiles(directory="static",html=True), name="static")
 
 
 if __name__=='__main__':
